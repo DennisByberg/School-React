@@ -3,16 +3,17 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Homepage";
 import SearchPage from "./pages/SearchPage";
 import TeamPage from "./pages/TeamPage";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div className="App">
+    <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/team" element={<TeamPage />} />
       </Routes>
-    </div>
+    </Layout>
   );
 }
 
