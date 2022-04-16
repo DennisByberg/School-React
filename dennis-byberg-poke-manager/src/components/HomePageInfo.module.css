@@ -5,3 +5,29 @@
 .pagename {
   text-decoration: underline;
 }
+
+.section {
+  margin: -1rem auto auto auto;
+  border: 2px solid black;
+  background-color: rgb(252, 89, 89);
+  border-radius: 4em;
+  box-shadow: 3px 3px 4px #000000;
+  padding: 5em;
+  max-width: 250px;
+}
+
+.pokemonimage {
+  height: 120px;
+  width: 260px;
+}
+
+.pokeballimage {
+  margin-top: -3rem;
+  margin-left: 21rem;
+  width: 5rem;
+  -webkit-transition: -webkit-transform 1s;
+}
+
+.pokeballimage:hover {
+  -webkit-transform: rotate(2520deg) translateZ(0);
+}

@@ -3,9 +3,10 @@
   height: 3rem;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(rgb(255, 174, 224), rgb(255, 166, 166));
+  background-image: linear-gradient(rgb(255, 139, 139), rgb(172, 201, 255));
   box-shadow: -1px 5px 15px black;
   justify-content: center;
+  margin-bottom: 4rem;
 }
 
 .logo {

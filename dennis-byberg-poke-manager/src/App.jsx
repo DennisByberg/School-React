@@ -12,6 +12,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/team" element={<TeamPage />} />
+
+        {/* TODO: Göra om till en "Error Page?" */}
+        <Route path="/*" element={<HomePage />} />
       </Routes>
     </Layout>
   );
