@@ -6,7 +6,7 @@ import Stage from "./Stage";
 import Display from "./Display";
 import StartButton from "./StartButton";
 
-const Tetris = () => {
+const Tetris = (props) => {
   return (
     <StyledTetrisWrapper>
       <StyledTetris>
