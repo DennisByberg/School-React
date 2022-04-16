@@ -25,9 +25,9 @@
   margin-top: -3rem;
   margin-left: 21rem;
   width: 5rem;
-  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
 }
 
 .pokeballimage:hover {
-  -webkit-transform: rotate(2520deg) translateZ(0);
+  transform: rotate(2520deg) translateZ(0);
 }
