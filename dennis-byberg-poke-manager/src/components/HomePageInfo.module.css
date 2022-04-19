@@ -25,9 +25,14 @@
   margin-top: -3rem;
   margin-left: 21rem;
   width: 5rem;
-  transition: transform 1s;
+  animation-name: spinner;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-.pokeballimage:hover {
-  transform: rotate(2520deg) translateZ(0);
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
 }
