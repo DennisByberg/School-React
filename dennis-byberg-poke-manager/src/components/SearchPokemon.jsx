@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./SearchPokemon.module.css";
 
-const SearchPokemon = () => {
+const SearchPokemon = ({ addToTeam, team, setTeam }) => {
   const [pokemon, setPokemon] = useState([]);
   const [text, setText] = useState("");
 
@@ -17,20 +17,26 @@ const SearchPokemon = () => {
   }, []);
 
   return (
-    <div>
+    <div className={classes.searchpokemon}>
       <input
+        className={classes.searchinput}
         type="text"
-        placeholder="Search..."
+        placeholder="Search pokemons..."
         value={text}
         onChange={(event) => setText(event.target.value)}
       />
-      <ul>
+      <ul className={classes.pokeullist}>
         {pokemon
           .filter((p) => p.name.toLowerCase().includes(text.toLowerCase()))
           .map((p) => (
-            <li key={p.name}>
-              <button>+</button>
+            <li className={classes.pokelist} key={p.name}>
               {p.name}
+              <button
+                onClick={() => addToTeam(p.name)}
+                className={classes.addtoteambutton}
+              >
+                Add to your team
+              </button>
             </li>
           ))}
       </ul>

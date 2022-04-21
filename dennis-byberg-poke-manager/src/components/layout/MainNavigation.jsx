@@ -12,10 +12,10 @@ const MainNavigation = () => {
             <Link to="/">Home Page</Link>
           </li>
           <li>
-            <Link to="/search">Search</Link>
+            <Link to="/search">Search Pokemons</Link>
           </li>
           <li>
-            <Link to="/team">Teams</Link>
+            <Link to="/team">My Team</Link>
           </li>
         </ul>
       </nav>

@@ -7,17 +7,26 @@ import Layout from "./components/layout/Layout";
 import { useState } from "react";
 
 function App() {
-  const [team, setTeam] = useState([
-    { name: "pikachu", nickname: "" },
-    { name: "bulbasaur", nickname: "" },
-  ]);
+  const [team, setTeam] = useState([]);
+
+  const addToTeamHandler = (name) => {
+    setTeam([...team, { name }]);
+  };
 
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* TODO: Använd setTeam för att lägga till */}
-        <Route path="/search" element={<SearchPage setTeam={setTeam} />} />
+        <Route
+          path="/search"
+          element={
+            <SearchPage
+              team={team}
+              setTeam={setTeam}
+              addToTeam={addToTeamHandler}
+            />
+          }
+        />
         <Route
           path="/team"
           element={<TeamPage team={team} setTeam={setTeam} />}
