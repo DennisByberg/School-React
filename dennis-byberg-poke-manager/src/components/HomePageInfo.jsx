@@ -6,11 +6,15 @@ import POKEBALL from "../images/pokeball2.png";
 const HomePageInfo = (props) => {
   return (
     <div className={classes.homepageinfo}>
-      <img className={classes.pokemonimage} src={POKEMON} alt="" />
+      <img className={classes.pokemonimage} src={POKEMON} alt="Pokemon-Text" />
       <section className={classes.section}>
         <p>DENNIS BYBERG POKE MANAGER </p>
       </section>
-      <img className={classes.pokeballimage} src={POKEBALL} alt="" />
+      <img
+        className={classes.pokeballimage}
+        src={POKEBALL}
+        alt="Spinning-Pokeball"
+      />
     </div>
   );
 };

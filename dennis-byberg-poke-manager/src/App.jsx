@@ -13,6 +13,11 @@ function App() {
     setTeam([...team, { name }]);
   };
 
+  const deleteFromTeamHandler = (name) => {
+    const newTeam = team.filter((poke) => poke.name !== name);
+    setTeam(newTeam);
+  };
+
   return (
     <Layout>
       <Routes>
@@ -29,7 +34,13 @@ function App() {
         />
         <Route
           path="/team"
-          element={<TeamPage team={team} setTeam={setTeam} />}
+          element={
+            <TeamPage
+              team={team}
+              setTeam={setTeam}
+              deleteFromTeam={deleteFromTeamHandler}
+            />
+          }
         />
         {/* TODO: Göra om till en "Error Page?" */}
         <Route path="/*" element={<Navigate to="/" />} />
