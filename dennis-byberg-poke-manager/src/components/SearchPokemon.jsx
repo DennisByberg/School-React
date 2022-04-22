@@ -34,7 +34,6 @@ const SearchPokemon = ({ addToTeam, buttonText }) => {
               <button
                 onClick={() => addToTeam(p.name)}
                 className={classes.addtoteambutton}
-                id={`button_${p.name}`}
               >
                 {buttonText}
               </button>

@@ -23,3 +23,9 @@ const MainNavigation = () => {
   );
 };
 export default MainNavigation;
+
+// Saknas enligt mig:
+
+// Hade kunnat göra en drop-down box istället, men tyckte nästan det blev snyggare med en main navigation som ligger längst upp på appen hela tiden!
+
+// Ville även lägga till så när man är inne på t.ex homepage ska den texten vara bold så att man ser vilken sida man är inne på!

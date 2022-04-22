@@ -2,28 +2,42 @@
   text-align: center;
 }
 
-.pagename {
-  text-decoration: underline;
-}
-
 .section {
-  margin: -1rem auto auto auto;
+  margin: auto;
   border: 2px solid black;
   background-color: rgb(252, 89, 89);
   border-radius: 4em;
-  box-shadow: 3px 3px 4px #000000;
-  padding: 5em;
+  box-shadow: 4px 4px 6px #000000;
+  padding: 2em;
   max-width: 250px;
 }
 
+.maintext {
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.signature {
+  font-family: "Qwitcher Grypen", cursive;
+  font-size: 6rem;
+  margin-top: 0;
+}
+
 .pokemonimage {
-  height: 120px;
-  width: 260px;
+  height: 130px;
+  width: 300px;
+}
+
+.pikachu {
+  height: 300px;
+  width: 360px;
 }
 
 .pokeballimage {
-  margin-top: -3rem;
-  margin-left: 21rem;
+  margin-top: -4rem;
+  margin-left: 16rem;
   width: 5rem;
   animation-name: spinner;
   animation-duration: 7s;

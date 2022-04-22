@@ -6,12 +6,11 @@
   background-image: linear-gradient(rgb(255, 139, 139), rgb(172, 201, 255));
   box-shadow: -1px 5px 15px black;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .logo {
-  font-size: 1rem;
-  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
   font-weight: bold;
   font-style: italic;
 }
@@ -36,12 +35,5 @@
 .header a.active {
   cursor: pointer;
   text-decoration: 2px underline;
-}
-
-.badge {
-  background-color: #cc2062;
-  color: white;
-  border-radius: 12px;
-  padding: 0 1rem;
-  margin-left: 0.5rem;
+  text-shadow: 1px 1px 15px rgb(255, 109, 231);
 }

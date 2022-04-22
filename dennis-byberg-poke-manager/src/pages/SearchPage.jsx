@@ -15,3 +15,7 @@ const SearchPage = ({ buttonText, addToTeam, team, setTeam }) => {
 };
 
 export default SearchPage;
+
+// Saknas enligt mig:
+
+// Lite mer information om pokemonen t.ex bild och vad det är för typ av pokemon, men hann tyvärr inte implementera detta... tråkigt :(

@@ -6,3 +6,7 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+// Saknas enligt mig:
+
+// Inte mycket egentligen... Hur mycket mer vill man ha på en startsida? :)

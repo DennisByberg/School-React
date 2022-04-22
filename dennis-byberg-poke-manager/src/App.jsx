@@ -8,10 +8,13 @@ import { useState } from "react";
 
 function App() {
   const [team, setTeam] = useState([]);
-  const [buttonText, setButtonText] = useState("Add To Team");
 
-  const addToTeamHandler = (name, id) => {
+  // ButtonText ville jag ändra när jag tryckte på den men hann tyvärr ej.
+  const [buttonText] = useState("Add To Team");
+
+  const addToTeamHandler = (name) => {
     setTeam([...team, { name }]);
+    alert(`Successfully Added ${name} to Your team`);
   };
 
   const deleteFromTeamHandler = (name) => {
@@ -21,12 +24,18 @@ function App() {
 
   const changeName = (name) => {
     const changedName = prompt(
-      "What do you want to change the pokemon name to?"
+      "What do you want to change the pokemons name to?"
     );
-    const newTeam = team.filter((poke) => poke.name !== name);
-    setTeam(newTeam);
-    name = changedName;
-    setTeam([...newTeam, { name }]);
+
+    // Byte av pokemon namn till mindre än 3 bokstäver ej tillåtet.
+    if (changedName.length > 2) {
+      const newTeam = team.filter((poke) => poke.name !== name);
+      setTeam(newTeam);
+      name = changedName;
+      setTeam([...newTeam, { name }]);
+    } else {
+      alert("Your new name needs to be 3 or more letters");
+    }
   };
 
   return (
@@ -55,7 +64,6 @@ function App() {
             />
           }
         />
-        {/* TODO: Göra om till en "Error Page?" */}
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
     </Layout>
