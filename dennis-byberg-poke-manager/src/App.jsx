@@ -8,14 +8,25 @@ import { useState } from "react";
 
 function App() {
   const [team, setTeam] = useState([]);
+  const [buttonText, setButtonText] = useState("Add To Team");
 
-  const addToTeamHandler = (name) => {
+  const addToTeamHandler = (name, id) => {
     setTeam([...team, { name }]);
   };
 
   const deleteFromTeamHandler = (name) => {
     const newTeam = team.filter((poke) => poke.name !== name);
     setTeam(newTeam);
+  };
+
+  const changeName = (name) => {
+    const changedName = prompt(
+      "What do you want to change the pokemon name to?"
+    );
+    const newTeam = team.filter((poke) => poke.name !== name);
+    setTeam(newTeam);
+    name = changedName;
+    setTeam([...newTeam, { name }]);
   };
 
   return (
@@ -29,6 +40,7 @@ function App() {
               team={team}
               setTeam={setTeam}
               addToTeam={addToTeamHandler}
+              buttonText={buttonText}
             />
           }
         />
@@ -38,6 +50,7 @@ function App() {
             <TeamPage
               team={team}
               setTeam={setTeam}
+              changeName={changeName}
               deleteFromTeam={deleteFromTeamHandler}
             />
           }

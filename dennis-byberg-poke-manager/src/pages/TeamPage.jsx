@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./TeamPage.module.css";
 
-const TeamPage = ({ deleteFromTeam, team, setTeam }) => {
+const TeamPage = ({ changeName, deleteFromTeam, team, setTeam }) => {
   return (
     <div className={classes.teampage}>
       <h1>Team Page</h1>
@@ -14,7 +14,12 @@ const TeamPage = ({ deleteFromTeam, team, setTeam }) => {
             >
               x
             </button>
-            <button>Change Name</button>
+            <button
+              onClick={() => changeName(t.name)}
+              className={classes.changename}
+            >
+              Change Name
+            </button>
             {t.name}
           </li>
         ))}

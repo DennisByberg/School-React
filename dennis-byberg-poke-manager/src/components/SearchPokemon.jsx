@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./SearchPokemon.module.css";
 
-const SearchPokemon = ({ addToTeam, team, setTeam }) => {
+const SearchPokemon = ({ addToTeam, buttonText }) => {
   const [pokemon, setPokemon] = useState([]);
   const [text, setText] = useState("");
 
@@ -34,8 +34,9 @@ const SearchPokemon = ({ addToTeam, team, setTeam }) => {
               <button
                 onClick={() => addToTeam(p.name)}
                 className={classes.addtoteambutton}
+                id={`button_${p.name}`}
               >
-                Add to your team
+                {buttonText}
               </button>
             </li>
           ))}
